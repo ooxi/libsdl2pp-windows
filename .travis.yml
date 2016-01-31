@@ -1,0 +1,17 @@
+language: cpp
+
+dist: trusty
+
+env:
+  matrix:
+     - TARGET='trusty-amd64-clang'
+     - TARGET='trusty-amd64-gcc'
+     - TARGET='windows-amd64'
+     - TARGET='windows-i686'
+
+before_install:
+  - ./deploy/travis-ci/$TARGET/before-install.sh
+
+script:
+  - ./deploy/travis-ci/$TARGET/script.sh
+
