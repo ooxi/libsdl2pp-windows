@@ -2,7 +2,7 @@
 
 using namespace SDL2pp;
 
-int main() {
+int SDL_main(int argc, char** argv) {
 try {
   using namespace SDL2pp;
 
